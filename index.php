@@ -48,24 +48,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <?php foreach ($hotels as $hotel_list) : ?>
-        <li><?=$hotel_list?>
-            <ul>
-                <?php foreach ($hotel_list as $key => $test) : ?>
-                <li>
-                <?=$key?>
-                <?=$test?>
-                </li>
-                <?php endforeach?>
-            </ul>
-        </li>
-            <?php endforeach?>
-        </ul>
-</body>
-</html>
+    <div class="container">
+        <h1 class="text-center">LISTA HOTELS</h1>     
+            <?php foreach ($hotels as $hotel_list) : ?>
+            <?php foreach ($hotel_list as $key => $test) : ?>
+                <div class="d-flex">
+                    <div class="title-voices">
+                        <p class="p-1"><?= $key ?></p>
+                    </div>
+                    <div class="options">
+                        <p class="ps-3"><?= $test ?></p>
+                    </div>
+                </div>
+                <?php endforeach ?>
+                <?php endforeach ?>
+        </div>
+    </body>
+    </html>
+                            
+     
     
